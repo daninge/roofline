@@ -75,7 +75,7 @@ int main(int argc, char *argv[]) {
             assert (false);
     }
 
-#pragma omp parallel private(id)
+#pragma omp parallel private(id) proc_bind(spread)
     {
         id = omp_get_thread_num();
 
